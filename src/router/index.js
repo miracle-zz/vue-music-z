@@ -1,14 +1,21 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/home/Home.vue'
+// import Home from '../views/home/Home.vue'
+import findMusic from '../views/findMusic/findMusic.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'findMusic',
+    component: findMusic,
+    redirect: '/recommend',
+    children: [{
+      path: '/recommend',
+      name: 'recommend',
+      components: () => import('views/findMusic/components/recommend')
+    }]
   }
   // {
   //   path: '/about',

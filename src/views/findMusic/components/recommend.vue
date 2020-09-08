@@ -1,15 +1,12 @@
 <template>
-  <div class="home"></div>
+  <div>推荐</div>
 </template>
 
 <script>
-
 export default {
-  name: 'Home',
-  components: {
 
-  }
 }
 </script>
+
 <style>
 </style>
